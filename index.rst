@@ -159,7 +159,7 @@ cartridgeとは？
                        "order_items": order.items.all()}
       order_context.update(order.details_as_dict())
 
-- orderオブジェクトのattribule、つまりOrderモデルのclassmethodでフィールドを取得している...？
+- orderオブジェクトのattribule、つまりOrderモデルのインスタンスメソッドでフィールドを取得している...？
 
 鍛えられ話その1
 ============================
