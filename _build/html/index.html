@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mezzanine(Cartridge)で上げよう コードリーディング力</title>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+  </head>
+  <body style='display: none'>
+    
+  <div class="section" id="mezzanine-cartridge">
+<h1>Mezzanine(Cartridge)で上げよう　コードリーディング力<a class="headerlink" href="#mezzanine-cartridge" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Mitsuki Sugiya  (&#64;equal_001)</p>
+<p>PyLadies Tokyo - 二周年記念パーティ</p>
+<p>2016/10/22 SAT</p>
+<div class="section" id="id1">
+<h2>お前誰よ<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<a class="reference internal image-reference" href="_images/me.jpg"><img alt="_images/me.jpg" src="_images/me.jpg" style="width: 150px;" /></a>
+<ul class="simple">
+<li>杉谷 弥月  (&#64;equal_001)</li>
+<li>コテハンはOMEGAです</li>
+<li>ビープラウドという会社でPythonでWebアプリ開発のお仕事をしてます</li>
+<li>PyCon JP 2016でPythonista（iOSアプリ開発環境ツール）について発表しました</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>今日話す内容<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>MezzanineとCartridgeの紹介</li>
+<li>これら2つを使ってコードリーディング力を上げていくゾッ</li>
+</ul>
+</div>
+<div class="section" id="mezzanine">
+<h2>Mezzanineとは？<a class="headerlink" href="#mezzanine" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="id3">
+<h2>Mezzanineとは？<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>Python製のCMS</li>
+<li>PHPでいうWordpressみたいなもの</li>
+<li>Djangoの上に乗っかっている</li>
+<li>pip install mezzanine</li>
+</ul>
+<a class="reference internal image-reference" href="_images/mezzanine.png"><img alt="_images/mezzanine.png" src="_images/mezzanine.png" style="width: 700px;" /></a>
+</div>
+<div class="section" id="id4">
+<h2>Mezzanineとは？<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<a class="reference internal image-reference" href="_images/mezzanine2.png"><img alt="_images/mezzanine2.png" src="_images/mezzanine2.png" style="width: 700px;" /></a>
+</div>
+<div class="section" id="id5">
+<h2>Mezzanineとは？<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<a class="reference internal image-reference" href="_images/mezzanine3.png"><img alt="_images/mezzanine3.png" src="_images/mezzanine3.png" style="width: 800px;" /></a>
+</div>
+<div class="section" id="cartridge">
+<h2>cartridgeとは？<a class="headerlink" href="#cartridge" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="id6">
+<h2>cartridgeとは？<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>MezzanineにCart機能をつけることができるプラグイン</li>
+<li>Djangoの上に乗っかっているMezzanine、の上に乗っかっている</li>
+<li>pip install cartridge</li>
+</ul>
+<a class="reference internal image-reference" href="_images/cartridge.png"><img alt="_images/cartridge.png" src="_images/cartridge.png" style="width: 700px;" /></a>
+</div>
+<div class="section" id="id7">
+<h2>cartridgeとは？<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<a class="reference internal image-reference" href="_images/cartridge2.png"><img alt="_images/cartridge2.png" src="_images/cartridge2.png" style="width: 700px;" /></a>
+</div>
+<div class="section" id="id8">
+<h2>cartridgeとは？<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<a class="reference internal image-reference" href="_images/cartridge3.png"><img alt="_images/cartridge3.png" src="_images/cartridge3.png" style="width: 700px;" /></a>
+</div>
+<div class="section" id="id9">
+<h2>仕事で使う<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>CMS(Mezzanine/Cartridge) に手を入れずに拡張したい</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li>バージョンアップするときにできるだけバグが起きないようにするため</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>独自アプリを切って必要な部分だけオーバーライドする</li>
+<li>それでも要件を満たせない機能は独自アプリを追加し、実装する</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h2>鍛えられ話その1<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="id11">
+<h2>鍛えられ話その1<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>「注文情報を入力するフォームの順番を変更したい」</p>
+</div>
+<div class="section" id="id12">
+<h2>鍛えられ話その1<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>「注文情報を入力するフォームの順番を変更したい」</p>
+<ul class="simple">
+<li>デフォルトでは 名-姓-市区町村-都道府県-国・・・アメリカ式の順序</li>
+<li>注文フォームはCartridgeのOrderFormで実装されている</li>
+<li>まずTemplateを見てみるとフォームは自動生成されている</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">fieldset</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">legend</span><span class="o">&gt;</span><span class="p">{</span><span class="o">%</span> <span class="n">trans</span> <span class="s2">&quot;Billing Details&quot;</span> <span class="o">%</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">legend</span><span class="o">&gt;</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">fields_for</span> <span class="n">form</span><span class="o">.</span><span class="n">billing_detail_fields</span> <span class="o">%</span><span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">fieldset</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>form.pyを確認するとOrderモデルのフォームをfieldsに指定している</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Order</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="p">([</span><span class="n">f</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">Order</span><span class="o">.</span><span class="n">_meta</span><span class="o">.</span><span class="n">fields</span> <span class="k">if</span>
+               <span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;billing_detail&quot;</span><span class="p">)</span> <span class="ow">or</span>
+               <span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;shipping_detail&quot;</span><span class="p">)]</span> <span class="o">+</span>
+               <span class="p">[</span><span class="s2">&quot;additional_instructions&quot;</span><span class="p">,</span> <span class="s2">&quot;discount_code&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>-&gt; my_shopを作成し、OrderFromを継承したFromでfieldsを上書きすれば良い</p>
+</div>
+<div class="section" id="id13">
+<h2>鍛えられ話その1<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>「注文確認メールで表示される住所の順番を変更したい」</p>
+<ul class="simple">
+<li>フォームの順序変更と同じ感じでいけるやろ！</li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h2>鍛えられ話その1<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>「注文確認メールで表示される住所の順番を変更したい」</p>
+<ul class="simple">
+<li>templateからメール送信している場所を特定する</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">send_order_email</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Send order receipt email on successful order.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">settings</span><span class="o">.</span><span class="n">use_editable</span><span class="p">()</span>
+    <span class="n">order_context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="n">order</span><span class="p">,</span> <span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="n">request</span><span class="p">,</span>
+                     <span class="s2">&quot;order_items&quot;</span><span class="p">:</span> <span class="n">order</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">all</span><span class="p">()}</span>
+    <span class="n">order_context</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">order</span><span class="o">.</span><span class="n">details_as_dict</span><span class="p">())</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>orderオブジェクトのattribule、つまりOrderモデルのclassmethodでフィールドを取得している...？</li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h2>鍛えられ話その1<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">details_as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the billing_detail_* and shipping_detail_* fields</span>
+<span class="sd">    as two name/value pairs of fields in a dict for each type.</span>
+<span class="sd">    Used in template contexts for rendering each type as groups</span>
+<span class="sd">    of names/values.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">fieldset</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;billing_detail&quot;</span><span class="p">,</span> <span class="s2">&quot;shipping_detail&quot;</span><span class="p">):</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">[(</span><span class="n">f</span><span class="o">.</span><span class="n">verbose_name</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">))</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_meta</span><span class="o">.</span><span class="n">fields</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">fieldset</span><span class="p">)]</span>
+        <span class="n">context</span><span class="p">[</span><span class="s2">&quot;order_</span><span class="si">%s</span><span class="s2">_fields&quot;</span> <span class="o">%</span> <span class="n">fieldset</span><span class="p">]</span> <span class="o">=</span> <span class="n">fields</span>
+    <span class="k">return</span> <span class="n">context</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>鍛えられ話その1<a class="headerlink" href="#id16" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ダメです</p>
+</div>
+<div class="section" id="id17">
+<h2>鍛えられ話その1<a class="headerlink" href="#id17" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>CMS(Mezzanine/Cartridge) に手を入れずに拡張したい</li>
+<li>この制約があるのでCartridgeのOrderモデルに手を入れることができない</li>
+<li>Fromの上書きでも対応できない</li>
+<li>templateで対応することになる</li>
+</ul>
+<a class="reference internal image-reference" href="_images/order_form.png"><img alt="_images/order_form.png" src="_images/order_form.png" style="width: 900px;" /></a>
+<p>似たようなことをしないといけないのがあと3箇所ある</p>
+<p>つらい</p>
+</div>
+<div class="section" id="id18">
+<h2>鍛えられ話その2<a class="headerlink" href="#id18" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>「管理画面のSiteのSettingsにあるShop用メールアドレスを意図したものにしたいので調査して」</p>
+<p>「環境変数とかでメールアドレスを指定できたら最高だよね」</p>
+<a class="reference internal image-reference" href="_images/mail2.png"><img alt="_images/mail2.png" src="_images/mail2.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li>Settingsというくらいだからsettings.pyで定義できるやろ！</li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h2>鍛えられ話その2<a class="headerlink" href="#id19" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>CartridgeのSettingsのドキュメントをみる</li>
+<li>それっぽいものがあった</li>
+</ul>
+<a class="reference internal image-reference" href="_images/mail.png"><img alt="_images/mail.png" src="_images/mail.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li>[dynamic] ってなんや..でもリストでなんか渡すっぽい？</li>
+<li>ヨシャ、settings.pyに書いてみるか</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SHOP_ORDER_FROM_EMAIL</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;hogehoge@test.jp&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h2>鍛えられ話その2<a class="headerlink" href="#id20" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>メールフォームが消えた</p>
+<a class="reference internal image-reference" href="_images/mail3.png"><img alt="_images/mail3.png" src="_images/mail3.png" style="width: 500px;" /></a>
+</div>
+<div class="section" id="id21">
+<h2>鍛えられ話その2<a class="headerlink" href="#id21" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ダメです</p>
+</div>
+<div class="section" id="id22">
+<h2>鍛えられ話その2<a class="headerlink" href="#id22" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>[dynamic] ってなんだよ -&gt; ドキュメントに乗ってない -&gt; DjangoもMezzanineもそれっぽいものがない</li>
+<li>コード読むしかない</li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h2>鍛えられ話その2<a class="headerlink" href="#id23" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>cartridge/shop/defaults.py でShopで使用するsettingsを定義しているようだ</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">register_setting</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;SHOP_ORDER_FROM_EMAIL&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;From Email&quot;</span><span class="p">),</span>
+    <span class="n">description</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Email address from which order receipts should be &quot;</span>
+        <span class="s2">&quot;emailed.&quot;</span><span class="p">),</span>
+    <span class="n">editable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">default</span><span class="o">=</span><span class="s2">&quot;do_not_reply@</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">gethostname</span><span class="p">(),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>最終的にMezzanineのSettingsの設定方法のドキュメントへたどり着く</li>
+<li>アプリ配下にdefaults.pyを生成し、そこに設定を書いていくと、Mezzanine側が勝手に読み込んで管理画面のSettingsを生成してくれる</li>
+<li>mezzanine/conf/__init__.py の register_settingメソッドでsettingsを生成していた</li>
+<li>my_shopアプリのdefaults.pyでSHOP_ORDER_FROM_EMAILを上書きすれば良い</li>
+<li>けど、面倒臭い。settingsとはなんだったのか。</li>
+<li>ていうか [dynamic] ってなんだよ</li>
+</ul>
+</div>
+<div class="section" id="id24">
+<h2>鍛えられ話その2<a class="headerlink" href="#id24" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>Mezzanine/Cartridgeのドキュメントは簡易すぎる（3rd-party製ではよくあること</li>
+<li>どうあがいてもコード読まなければいけない</li>
+</ul>
+</div>
+<div class="section" id="id25">
+<h2>結果<a class="headerlink" href="#id25" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>ドキュメントに書かれていない-&gt;フレームワークやモジュールのコードを読むの姿勢が自然と身についた</li>
+<li>OrderFormの実装みたいに拡張性のないコードを、どう改善できるかを考える機会にもなる</li>
+<li>Djangoはすごい。フックポイントがあんなにあるなんて...</li>
+</ul>
+</div>
+<div class="section" id="id26">
+<h2>まとめ<a class="headerlink" href="#id26" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>MezzanineやCartridgeを使い込んだらコードリーディング力がUPするのでおすすめ！</li>
+<li>程よく整頓されてないコードは学びがある（当人比</li>
+<li>ブログやショップ機能はモデル構成や設計がわかりやすい題材</li>
+<li>フレームワークやCMSはPythonの特殊メソッドやメタプロを勉強するにはもってこい</li>
+</ul>
+</div>
+</div>
+
+
+  <div id="help">
+      Use the left and right arrow keys or click the left and right
+      edges of the page to navigate between slides.<br>
+      (Press 'H' or navigate to hide this message.)
+  </div>
+  </body>
+  <script type="text/javascript" src="_static/js/initialize.js"></script>
+  <script type="text/javascript" src="_static/js/slides.js"></script>
+</html>
